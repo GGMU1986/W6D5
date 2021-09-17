@@ -21,10 +21,14 @@
     
     <br>
     Sex:
-    <input id="M" name="cat[sex]" type="radio" value="M">
+    <% Cat::SEXES.each do |sex| %>
+       <input id="<%= sex %>" name="cat[sex]" type="radio" value="<%= sex %>" <%= (@cat.sex == sex) ? "checked" : "" %>>
+       <label for="<%=sex%>"><%=sex%></label>
+    <% end %>
+    <!--<input id="M" name="cat[sex]" type="radio" value="M"  >
     <label for="M">M</label>
     <input id="F" name="cat[sex]" type="radio" value="F">
-    <label for="F">F</label>
+    <label for="F">F</label> -->
     <br>
     <br>
     Description:
@@ -34,3 +38,4 @@
     <br>
     <input type="submit" value="Add cat">
 </form>
+

@@ -16,10 +16,11 @@ require "action_view"
 
 class Cat < ApplicationRecord
     COLORS = ["Orange", "Black", "Calico", "Gray", "Tabby", "White"]
+    SEXES = ["M", "F"] 
 
     validates :birthdate, :color, :name, :sex, :description, presence: true
     validates :color, inclusion: COLORS
-    validates :sex, inclusion: ["M", "F"] 
+    validates :sex, inclusion: SEXES
 
     include ActionView::Helpers::DateHelper
 
