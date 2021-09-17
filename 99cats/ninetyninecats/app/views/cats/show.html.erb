@@ -1,2 +1,26 @@
-<h1>Cats#show</h1>
-<p>Find me in app/views/cats/show.html.erb</p>
+<h1> Welcome to my Page! </h1>
+
+<table>
+    <tr>
+        <td><strong>Name:</strong></td>
+        <td><%= @cat.name %></td>
+    </tr>
+    <tr>
+        <td><strong>Birthdate: </strong></td>
+        <td><%= @cat.birthdate %></td>
+    </tr>
+    <tr>
+        <td><strong>Color: </strong></td>
+        <td><%= @cat.color %></td>
+    </tr>
+    <tr>
+        <td><strong>Sex: </strong></td>
+        <td><%= @cat.sex %></td>
+    </tr>
+    <tr>
+        <td><strong>Description: </strong></td>
+        <td><%= @cat.description %></td>
+    </tr>
+</table>
+<br><br>
+<a href="<%= cats_url %>"><strong>Back to Cats!</strong></a>
