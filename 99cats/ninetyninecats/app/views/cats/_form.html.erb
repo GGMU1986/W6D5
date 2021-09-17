@@ -1,11 +1,7 @@
-<form action="<%= cat.persisted? ? cat_url(cat) : cats_url %>" method="post" >
 
 
-    <input type="hidden" name="_method" value="PATCH">
-
-
-
-
+<form action="<%=  %>" method="post" >
+    <input type="hidden" name="_method" value="<%=  %>">
     <label for="name">Name: </label>
     <input id="name" type="text" name="cat[name]" value="<%= cat.name %>"/>
     <br>
